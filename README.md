@@ -86,7 +86,7 @@ NEAT will evolve the neural networks over generations to improve performance.
 
 ## How It Works
 
-**Car Class**
+**1. Car Class**
 
 **Each car has:**
 Position, speed, and angle
@@ -101,15 +101,16 @@ Position, speed, and angle
 def get_reward(self):
     return self.distance / (CAR_SIZE_X / 2)
 ```
-## Simulation
+**2. Simulation**
 
 Runs one generation of cars.
 
-Each car’s neural network outputs one of four actions:
-Turn right
-Turn left
-Slow down
-Speed up
+  **Each car’s neural network outputs one of four actions:**
+  
+    Turn right
+    Turn left
+    Slow down
+    Speed up
 
 Cars update their position and radar sensors each frame.
 
@@ -117,17 +118,17 @@ Fitness is updated in real-time based on distance traveled.
 
 ## NEAT Algorithm
 
-**Population:** 30 genomes per generation (configurable)
+**1. Population:** 30 genomes per generation (configurable)
 
-**Neural network:** 5 inputs (radars), 4 outputs (actions)
+**2. Neural network:** 5 inputs (radars), 4 outputs (actions)
 
-**Fitness:** Maximized using distance traveled
+**3. Fitness:** Maximized using distance traveled
 
-**Speciation:** Groups similar genomes to preserve diversity
+**4. Speciation:** Groups similar genomes to preserve diversity
 
-**Mutation:** Adjusts weights, biases, and structure
+**5. Mutation:** Adjusts weights, biases, and structure
 
-**Crossover:** Combines top-performing genomes for next generation
+**6. Crossover:** Combines top-performing genomes for next generation
 
 NEAT configuration is stored in config.txt.
 ## NEAT Configuration Highlights
@@ -143,7 +144,7 @@ pop_size = 30 → Number of genomes per generation
 
 fitness_criterion = max → NEAT maximizes fitness
 ```
-Screenshots
+## Screenshots
 <div style="text-align: center;">
   <img src="assets/screenshots/image.png"/>
 </div

@@ -2,6 +2,13 @@
 
 This project implements a **self-driving car simulation** using **NEAT (NeuroEvolution of Augmenting Topologies)** in Python with **Pygame**. The cars learn to navigate a track using radar sensors and evolve their neural networks over generations.  
 
+
+<div style="text-align: center;">
+  <img src="assets/screenshots/image.png"/>
+</div
+
+
+
 ---
 
 

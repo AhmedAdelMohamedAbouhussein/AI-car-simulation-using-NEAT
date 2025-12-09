@@ -9,11 +9,6 @@ current_generation = 0        # Tracks the current NEAT generation
 
 # --- Main simulation function ---
 def run_simulation(genomes, config):
-    """
-    Runs one generation of the NEAT simulation.
-    :param genomes: List of genomes (neural network blueprints) in the current generation.
-    :param config: NEAT configuration object.
-    """
     global current_generation
     current_generation += 1  # Increment generation count
 

@@ -55,8 +55,8 @@ class Car:
     def check_radar(self, degree, game_map):
         length = 0
         # Calculate x, y position along radar ray
-        x = int(self.center[0] + math.cos(math.radians(360 - (self.angle + degree))) * length)
-        y = int(self.center[1] + math.sin(math.radians(360 - (self.angle + degree))) * length)
+        x = int(self.center[0])
+        y = int(self.center[1])
 
         # Extend radar until it hits border or reaches 300 pixels
         while not game_map.get_at((x, y)) == BORDER_COLOR and length < 300:
@@ -96,7 +96,7 @@ class Car:
                        int(self.position[1]) + CAR_SIZE_Y / 2]
 
         # Calculate car corners for collision detection
-        length = 0.5 * CAR_SIZE_X
+        length = math.sqrt((CAR_SIZE_X/2)**2 + (CAR_SIZE_Y/2)**2)
         self.corners = [
             [self.center[0] + math.cos(math.radians(360 - (self.angle + a))) * length,
              self.center[1] + math.sin(math.radians(360 - (self.angle + a))) * length]
